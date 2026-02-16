@@ -1,0 +1,958 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Problem Thesis — Tikvah Health and Wellness</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Workspace nav adjustments */
+    nav { top: 2rem; }
+    .hero { padding-top: 12rem; }
+
+    /* Quote cards */
+    .quote-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-left: 3px solid var(--accent);
+      border-radius: 12px;
+      padding: 2rem;
+    }
+    .quote-card blockquote {
+      font-size: 1rem;
+      color: var(--text-secondary);
+      line-height: 1.75;
+      font-style: italic;
+      margin-bottom: 1rem;
+    }
+    .quote-card blockquote::before {
+      content: "\201C";
+      font-size: 2.5rem;
+      color: var(--accent);
+      line-height: 0;
+      vertical-align: -0.6rem;
+      margin-right: 0.15rem;
+    }
+    .quote-attribution {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      font-style: normal;
+    }
+
+    /* Bar chart value labels */
+    .bar-value {
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--text-secondary);
+      min-width: 80px;
+      flex-shrink: 0;
+    }
+
+    /* Principle card implication */
+    .principle-implication {
+      margin-top: 1rem;
+      padding-top: 0.75rem;
+      border-top: 1px solid var(--border);
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+    .principle-implication strong {
+      color: var(--accent-light);
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    /* Jobs done state */
+    .done-state {
+      margin-top: 0.75rem;
+      padding: 0.6rem 0.75rem;
+      background: var(--green-bg);
+      border: 1px solid var(--green-border);
+      border-radius: 6px;
+      font-size: 0.8rem;
+      color: var(--text-secondary);
+      line-height: 1.5;
+    }
+    .done-state-label {
+      font-size: 0.65rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--green);
+      font-weight: 600;
+      display: block;
+      margin-bottom: 0.25rem;
+    }
+
+    /* Responsive overrides for quote grid */
+    @media (max-width: 768px) {
+      .quote-card blockquote { font-size: 0.9rem; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- WORKSPACE NAV -->
+<div class="workspace-nav">
+  <a href="index.html" class="ws-nav-home">Tikvah Health and Wellness</a>
+  <a href="market.html" class="ws-nav-link ws-nav-disabled">Market &rarr;</a>
+</div>
+
+<!-- NAVIGATION -->
+<nav>
+  <a href="#" class="nav-logo">Tikvah Health and Wellness</a>
+  <ul class="nav-links">
+    <li><a href="#story">The Story</a></li>
+    <li><a href="#summary">Summary</a></li>
+    <li><a href="#evidence">Evidence</a></li>
+    <li><a href="#impact">Impact</a></li>
+    <li><a href="#principles">Principles</a></li>
+    <li><a href="#jobs">Jobs</a></li>
+    <li><a href="#voices">Voices</a></li>
+    <li><a href="#gate">Gate Review</a></li>
+    <li><a href="#sources">Sources</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="container">
+    <h1>Tikvah Health and Wellness<br><span class="gradient-text">Problem Thesis</span></h1>
+    <p class="lead">76.4% of US adults live with chronic conditions. The healthcare system designed to treat them structurally excludes root-cause investigation.</p>
+
+    <div class="funnel">
+      <div class="funnel-box">Extract</div>
+      <span class="funnel-arrow">&rarr;</span>
+      <div class="funnel-box">Research</div>
+      <span class="funnel-arrow">&rarr;</span>
+      <div class="funnel-box">Process</div>
+      <span class="funnel-arrow">&rarr;</span>
+      <div class="funnel-box highlight">Validate</div>
+      <span class="funnel-arrow">&rarr;</span>
+      <div class="funnel-box highlight">Gate Review</div>
+    </div>
+
+    <div class="hero-stats">
+      <div>
+        <div class="hero-stat-value accent">194M</div>
+        <div class="hero-stat-label">Adults with chronic conditions</div>
+      </div>
+      <div>
+        <div class="hero-stat-value accent">226</div>
+        <div class="hero-stat-label">Research citations</div>
+      </div>
+      <div>
+        <div class="hero-stat-value green">22/22</div>
+        <div class="hero-stat-label">Validation checks</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- THE STORY (Narrative) -->
+<div class="narrative" id="story">
+  <div class="container">
+
+    <!-- Chapter 1 -->
+    <div class="narrative-chapter">
+      <div class="narrative-num">Chapter 1</div>
+      <h3>The Problem</h3>
+      <p>Conventional healthcare optimized for acute disease management through time-constrained encounters systematically excludes root-cause investigation. <strong>76.4% of adults</strong> report chronic conditions (<a href="https://www.cdc.gov/pcd/issues/2025/24_0539.htm" target="_blank" class="source-link">CDC, 2025</a>). 51.4% live with multiple simultaneously. The system generates fragmented care &mdash; one specialist per symptom &mdash; without examining interconnections.</p>
+    </div>
+    <div class="narrative-divider"></div>
+
+    <!-- Chapter 2 -->
+    <div class="narrative-chapter">
+      <div class="narrative-num">Chapter 2</div>
+      <h3>The Evidence</h3>
+      <p><strong>25% of insured adults</strong> delay or forgo care due to administrative burden &mdash; an impact comparable to financial barriers (<a href="https://academic.oup.com/healthaffairsscholar/article/3/11/qxaf216/8320353" target="_blank" class="source-link">Patient Admin Burden research, 2025</a>). Workers spend the equivalent of <strong>$21.6 billion</strong> annually dealing with healthcare administration (<a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC8522557/" target="_blank" class="source-link">PMC, 2021</a>). <strong>54%</strong> of insured adults with commercial insurance have been told that medications for their chronic or rare disease are no longer covered (<a href="https://www.panfoundation.org/more-than-half-of-patients-report-health-insurance-denied-coverage-for-medications/" target="_blank" class="source-link">PAN Foundation, 2025</a>). <strong>36%</strong> report their health condition worsened while waiting for prior authorization approval (<a href="https://drfirst.com/press-releases/stuck-in-the-system-how-prior-authorization-delays-frustrate-and-harm-patients" target="_blank" class="source-link">DrFirst, 2025</a>). Cost escalation compounds the problem: patients with hypertension and three or more comorbidities incur $13,920 annually &mdash; a <strong>3.6-fold increase</strong> over those with hypertension alone ($3,914) (<a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC5836318/" target="_blank" class="source-link">PMC, 2018</a>).</p>
+    </div>
+    <div class="narrative-divider"></div>
+
+    <!-- Chapter 3 -->
+    <div class="narrative-chapter">
+      <div class="narrative-num">Chapter 3</div>
+      <h3>The Human Cost</h3>
+      <p><strong>Medical dismissal</strong> &mdash; patients are told "nothing wrong" while declining. <strong>Insurance gatekeeping</strong> &mdash; one patient's insurer four times denied coverage of an antidepressant prescribed by her doctor, despite a genetic test indicating adverse reactions from all alternatives (<a href="https://www.columbian.com/news/2025/feb/22/who-is-in-charge-of-health-care-vancouver-womans-doctor-prescribed-a-medication-but-her-insurance-denied-her-four-times/" target="_blank" class="source-link">The Columbian, 2025</a>). Functional medicine costs <strong>$350&ndash;$950 initially</strong>, with comprehensive programs costing <strong>$5,000&ndash;$15,000 per year</strong> (<a href="https://fullscript.com/blog/the-average-price-of-a-functional-medicine-visit" target="_blank" class="source-link">Fullscript/CCF Med, 2025</a>) &mdash; largely out of pocket since only 23% of insurance plans cover advanced functional testing even when medically justified. There is approximately <strong>1 functional medicine practitioner per 100,000+ Americans</strong> compared to 1 conventional primary care physician per 1,700 (<a href="https://www.ifm.org/find-a-practitioner" target="_blank" class="source-link">IFM, 2025</a>).</p>
+    </div>
+    <div class="narrative-divider"></div>
+
+    <!-- Chapter 4 -->
+    <div class="narrative-chapter">
+      <div class="narrative-num">Chapter 4</div>
+      <h3>The Ask</h3>
+      <p>The gate question: <strong>Is this problem real and severe?</strong> The evidence is presented below. 22 validation checks passed. The decision to proceed, revise, or kill rests with the human reviewer.</p>
+    </div>
+
+    <!-- CTA -->
+    <div class="narrative-cta">
+      <strong>Gate 1 &mdash; Problem</strong><br>
+      The evidence above supports one question: Is this problem real and severe enough to justify market investigation?
+    </div>
+  </div>
+</div>
+
+<!-- 01 — EXECUTIVE SUMMARY -->
+<section id="summary">
+  <div class="container">
+    <div class="section-num">01 &mdash; Executive Summary</div>
+    <h2>The Problem at a Glance</h2>
+    <p class="section-lead">Three dimensions of a structural healthcare failure affecting 194 million American adults.</p>
+
+    <div class="card-grid cols-3">
+      <!-- Who Suffers -->
+      <div class="card">
+        <div class="card-label purple">Who Suffers</div>
+        <h3>194M Adults</h3>
+        <p>194 million adults with chronic conditions. 36.7% use complementary approaches, up from 19.2% in 2002. Young adult prevalence up 7.0 percentage points between 2013 and 2023.</p>
+      </div>
+      <!-- How They Suffer -->
+      <div class="card">
+        <div class="card-label amber">How They Suffer</div>
+        <h3>Administrative &amp; Financial Burden</h3>
+        <p>25% delay care from administrative burden. 36% report health worsens during prior authorization waits. 3.6x cost escalation with comorbidities. Functional medicine $5,000&ndash;$15,000/yr out of pocket.</p>
+      </div>
+      <!-- Why It Persists -->
+      <div class="card">
+        <div class="card-label red">Why It Persists</div>
+        <h3>Structural Lock-In</h3>
+        <p>Fee-for-service determines care models. 7&ndash;15 minute visits preclude root-cause investigation. No integration between conventional and functional medicine. 50%+ physician burnout.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 02 — EVIDENCE -->
+<section class="section-alt" id="evidence">
+  <div class="container">
+    <div class="section-num">02 &mdash; Evidence</div>
+    <h2>Evidence Base</h2>
+    <p class="section-lead">39 evidence entries across four categories from 226 research citations.</p>
+
+    <div class="accordion">
+
+      <!-- Prevalence -->
+      <div class="accordion-item open">
+        <div class="accordion-header" onclick="toggleAccordion(this)">
+          <div class="accordion-header-left">
+            <h3>Prevalence</h3>
+            <span class="badge strong">8 entries</span>
+          </div>
+          <span class="accordion-arrow">&#9662;</span>
+        </div>
+        <div class="accordion-content">
+          <div class="accordion-body">
+            <ul class="criteria-list">
+              <li>76.4% of US adults (approximately 194 million) reported one or more chronic conditions in 2023 <span class="criteria-source">&mdash; <a href="https://www.cdc.gov/pcd/issues/2025/24_0539.htm" target="_blank" class="source-link">CDC, 2025</a></span></li>
+              <li>51.4% of US adults (130 million) reported multiple chronic conditions simultaneously <span class="criteria-source">&mdash; <a href="https://www.cdc.gov/pcd/issues/2025/24_0539.htm" target="_blank" class="source-link">CDC, 2025</a></span></li>
+              <li>Chronic condition prevalence among young adults increased by 7.0 percentage points between 2013 and 2023 <span class="criteria-source">&mdash; <a href="https://www.cdc.gov/pcd/issues/2025/24_0539.htm" target="_blank" class="source-link">CDC, 2025</a></span></li>
+              <li>36.7% of Americans used at least one complementary health approach in 2022, up from 19.2% in 2002 <span class="criteria-source">&mdash; <a href="https://www.nih.gov/news-events/news-releases/nih-analysis-reveals-significant-rise-use-complementary-health-approaches-especially-pain-management" target="_blank" class="source-link">NCCIH/JAMA, 2024</a></span></li>
+              <li>15% of US adults had undiagnosed hypertension, hypercholesterolemia, or diabetes <span class="criteria-source">&mdash; CDC, 2010</span></li>
+              <li>Subclinical thyroid dysfunction affects up to 8% of the general population with most individuals unaware <span class="criteria-source">&mdash; <a href="https://infusionhealth.org/thyroid-dysfunction/subclinical-thyroid-dysfunction-causes-symptoms-importance/" target="_blank" class="source-link">Infusion Health, 2025</a></span></li>
+              <li>Approximately 30 million Americans experience significant health problems that defy diagnosis <span class="criteria-source">&mdash; Duke University Undiagnosed Diseases Network, 2025</span></li>
+              <li>IFM maintains 3,100+ active practitioner listings across 74 countries &mdash; approximately 1 per 100,000+ Americans <span class="criteria-source">&mdash; <a href="https://www.ifm.org/find-a-practitioner" target="_blank" class="source-link">IFM, 2025</a></span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Severity -->
+      <div class="accordion-item">
+        <div class="accordion-header" onclick="toggleAccordion(this)">
+          <div class="accordion-header-left">
+            <h3>Severity</h3>
+            <span class="badge significant">12 entries</span>
+          </div>
+          <span class="accordion-arrow">&#9662;</span>
+        </div>
+        <div class="accordion-content">
+          <div class="accordion-body">
+            <ul class="criteria-list">
+              <li>Average primary care visits last 7&ndash;15 minutes; functional medicine requires 60&ndash;90 minutes initially, 30&ndash;45 minutes for follow-ups <span class="criteria-source">&mdash; Multiple practitioner sources, 2025</span></li>
+              <li>Patients with hypertension and 3+ comorbidities incur $13,920 annually vs $3,914 for hypertension alone &mdash; 3.6x escalation <span class="criteria-source">&mdash; <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC5836318/" target="_blank" class="source-link">PMC, 2018</a></span></li>
+              <li>25% of insured adults delay or forgo care due to administrative tasks &mdash; impact comparable to financial barriers <span class="criteria-source">&mdash; <a href="https://academic.oup.com/healthaffairsscholar/article/3/11/qxaf216/8320353" target="_blank" class="source-link">Patient Admin Burden research, 2025</a></span></li>
+              <li>US workers spend equivalent of $21.6 billion in time annually dealing with healthcare administration <span class="criteria-source">&mdash; <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC8522557/" target="_blank" class="source-link">PMC, 2021</a></span></li>
+              <li>Additional costs of $26.4 billion in absences and $95.6 billion in lost productivity from insurer interactions <span class="criteria-source">&mdash; <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC8522557/" target="_blank" class="source-link">PMC, 2021</a></span></li>
+              <li>57% of patients devoted time to seeking information from insurers or providers; one-third reporting a billing problem delayed or missed care <span class="criteria-source">&mdash; <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC8522557/" target="_blank" class="source-link">PMC, 2021</a></span></li>
+              <li>35% of Americans needing prior authorization describe the process as difficult; 36% said health worsened while waiting <span class="criteria-source">&mdash; <a href="https://drfirst.com/press-releases/stuck-in-the-system-how-prior-authorization-delays-frustrate-and-harm-patients" target="_blank" class="source-link">DrFirst, 2025</a></span></li>
+              <li>54% of insured adults with commercial insurance told chronic disease medications no longer covered <span class="criteria-source">&mdash; <a href="https://www.panfoundation.org/more-than-half-of-patients-report-health-insurance-denied-coverage-for-medications/" target="_blank" class="source-link">PAN Foundation, 2025</a></span></li>
+              <li>Among patients whose prior authorization was denied, one in four never obtained the prescribed medication <span class="criteria-source">&mdash; DrFirst, 2025</span></li>
+              <li>More than 50% of healthcare professionals report burnout symptoms; 58% of conventional physicians vs significantly lower rates in functional medicine <span class="criteria-source">&mdash; Healthcare burnout research, 2025</span></li>
+              <li>Peri-coronary fat inflammation detects early coronary disease risk in young adults before calcification appears on standard screening <span class="criteria-source">&mdash; <a href="https://udshealth.com/blog/coronary-inflammation-marker-heart-risk-young-adults/" target="_blank" class="source-link">UDS Health, 2025</a></span></li>
+              <li>Increasing medication adherence associates with higher total costs without disease resolution &mdash; sustained symptomatic control requiring indefinite medication <span class="criteria-source">&mdash; <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC10119243/" target="_blank" class="source-link">PMC, 2023</a></span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Customer Voice -->
+      <div class="accordion-item">
+        <div class="accordion-header" onclick="toggleAccordion(this)">
+          <div class="accordion-header-left">
+            <h3>Customer Voice</h3>
+            <span class="badge moderate">8 entries</span>
+          </div>
+          <span class="accordion-arrow">&#9662;</span>
+        </div>
+        <div class="accordion-content">
+          <div class="accordion-body">
+            <ul class="criteria-list">
+              <li>Have you ever walked out of a doctor's office with a prescription but no real understanding of <em>why</em> you're feeling unwell? You're not alone. <span class="criteria-source">&mdash; Practitioner accounts, 2025</span></li>
+              <li>Many patients break down in tears during their first consultation &mdash; not because they're sad, but because they finally feel understood after years of having their concerns dismissed <span class="criteria-source">&mdash; Practitioner accounts, 2025</span></li>
+              <li>"We can only go over one of your problems today, which one is it going to be?" <span class="criteria-source">&mdash; Physician account, 2025</span></li>
+              <li>The conventional approach can feel fragmented: one specialist for digestion, another for hormones, another for mental health. Rarely are these systems viewed as interconnected <span class="criteria-source">&mdash; Multiple practitioner sources, 2025</span></li>
+              <li>Patients report being told "there is nothing wrong with you" or "it's all in your head" after years of experiencing genuine health decline <span class="criteria-source">&mdash; Medical gaslighting accounts, 2025</span></li>
+              <li>Her insurance provider has four times denied coverage of an antidepressant medication prescribed by her doctor despite a genetic test indicating adverse reactions from all alternatives <span class="criteria-source">&mdash; <a href="https://www.columbian.com/news/2025/feb/22/who-is-in-charge-of-health-care-vancouver-womans-doctor-prescribed-a-medication-but-her-insurance-denied-her-four-times/" target="_blank" class="source-link">Patient account, 2025</a></span></li>
+              <li>Surface-level wellness perks fail without culture change &mdash; employees need real support, not token benefits <span class="criteria-source">&mdash; Workplace wellness research, 2025</span></li>
+              <li>Through careful investigation, Dr. Karmazin discovered that Sarah had undiagnosed celiac disease complicated by mold exposure in her home. Six months after beginning treatment, Sarah returned to teaching part-time <span class="criteria-source">&mdash; Practitioner case study, 2025</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Current Solutions -->
+      <div class="accordion-item">
+        <div class="accordion-header" onclick="toggleAccordion(this)">
+          <div class="accordion-header-left">
+            <h3>Current Solutions</h3>
+            <span class="badge moderate">11 entries</span>
+          </div>
+          <span class="accordion-arrow">&#9662;</span>
+        </div>
+        <div class="accordion-content">
+          <div class="accordion-body">
+            <ul class="criteria-list">
+              <li>Cleveland Clinic two-year study: 31% of functional medicine patients achieved clinically meaningful improvement vs 22% in primary care <span class="criteria-source">&mdash; <a href="https://jamanetwork.com/journals/jamanetworkopen/fullarticle/2753520" target="_blank" class="source-link">Cleveland Clinic, 2019</a></span></li>
+              <li>Functional medicine consultation costs: initial $350&ndash;$950; comprehensive programs $5,000&ndash;$15,000/yr; monthly membership $300&ndash;$700/mo <span class="criteria-source">&mdash; <a href="https://fullscript.com/blog/the-average-price-of-a-functional-medicine-visit" target="_blank" class="source-link">Fullscript/CCF Med, 2025</a></span></li>
+              <li>Only 23% of insurance plans cover advanced functional testing even when medically justified <span class="criteria-source">&mdash; Insurance analysis, 2025</span></li>
+              <li>DPC shows $313 less per-member per-month, 54% reduction in ER claims, 25% fewer hospital admissions, 99% satisfaction <span class="criteria-source">&mdash; DPC research, 2025</span></li>
+              <li>DPC market growing &gt;1000% in past 6 years with 1,400+ US practices <span class="criteria-source">&mdash; DPC research, 2025</span></li>
+              <li>Kaiser Permanente integrated model aligns incentives "to keep people healthy, rather than seeking to generate revenues when they are sick" <span class="criteria-source">&mdash; <a href="https://about.kaiserpermanente.org/expertise-and-impact/public-policy/integrated-care" target="_blank" class="source-link">Kaiser Permanente, 2025</a></span></li>
+              <li>Health sharing ministries (Knew Health, Medi-Share, Sedera) cover functional medicine but are faith-based or niche <span class="criteria-source">&mdash; Health sharing research, 2025</span></li>
+              <li>Consumer wellness tools (Oura Ring, InsideTracker, Function Health) exist but are expensive, fragmented, and disconnected from clinical care <span class="criteria-source">&mdash; Consumer health technology research, 2025</span></li>
+              <li>Parsley Health telehealth: 10,205 participants, NPS 81.35, but membership-based private-pay model <span class="criteria-source">&mdash; Parsley Health research, 2025</span></li>
+              <li>Only 7% of firms with 50+ workers contract directly for primary care services <span class="criteria-source">&mdash; <a href="https://www.kff.org/health-costs/2025-employer-health-benefits-survey/" target="_blank" class="source-link">KFF, 2025</a></span></li>
+              <li>Insurance billing infrastructure fundamentally incompatible with functional medicine: hour-long consultations deemed unnecessary by insurers <span class="criteria-source">&mdash; Practitioner analysis, 2025</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- 03 — IMPACT & SEVERITY -->
+<section id="impact">
+  <div class="container">
+    <div class="section-num">03 &mdash; Impact &amp; Severity</div>
+    <h2>Scale of the Problem</h2>
+    <p class="section-lead">Quantified impact across prevalence, administrative burden, cost escalation, and insurance barriers.</p>
+
+    <div class="stat-row">
+      <div class="stat-card">
+        <div class="stat-card-value" style="color: var(--accent-light);">76.4%</div>
+        <div class="stat-card-label">Adults with chronic conditions</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-card-value" style="color: var(--red);">25%</div>
+        <div class="stat-card-label">Delay care due to admin burden</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-card-value" style="color: var(--amber);">3.6x</div>
+        <div class="stat-card-label">Cost escalation with comorbidities</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-card-value" style="color: var(--red);">54%</div>
+        <div class="stat-card-label">Told meds no longer covered</div>
+      </div>
+    </div>
+
+    <!-- Bar Chart -->
+    <h3 style="margin-bottom: 1.5rem;">Where Healthcare Burden Falls</h3>
+    <div class="bar-chart">
+      <div class="bar-row">
+        <div class="bar-label">Lost productivity</div>
+        <div class="bar-track">
+          <div class="bar-fill" style="width: 100%;">$95.6B</div>
+        </div>
+      </div>
+      <div class="bar-row">
+        <div class="bar-label">Worker absences</div>
+        <div class="bar-track">
+          <div class="bar-fill" style="width: 27.6%;">$26.4B</div>
+        </div>
+      </div>
+      <div class="bar-row">
+        <div class="bar-label">Admin time</div>
+        <div class="bar-track">
+          <div class="bar-fill" style="width: 22.6%;">$21.6B</div>
+        </div>
+      </div>
+      <div class="bar-row">
+        <div class="bar-label">Care delays</div>
+        <div class="bar-track">
+          <div class="bar-fill" style="width: 25%; background: var(--red);">25% of insured adults</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 04 — FIRST PRINCIPLES -->
+<section class="section-alt" id="principles">
+  <div class="container">
+    <div class="section-num">04 &mdash; First Principles</div>
+    <h2>Derived Principles</h2>
+    <p class="section-lead">Five principles derived from evidence using the 5-test framework. Each constrains downstream design decisions.</p>
+
+    <div class="card-grid cols-2">
+
+      <!-- P1 -->
+      <div class="card">
+        <div class="card-label purple">P1</div>
+        <h3>Root-cause health investigation requires fundamentally different time allocation than symptom management</h3>
+        <p>Conventional visits average 7&ndash;15 minutes; functional medicine requires 60&ndash;90 minutes initially, 30&ndash;45 minutes for follow-up. Cleveland Clinic study showed 31% meaningful improvement in functional medicine vs. 22% in primary care, attributed to "differences in the functional medicine model itself" (<a href="https://jamanetwork.com/journals/jamanetworkopen/fullarticle/2753520" target="_blank" class="source-link">Cleveland Clinic, 2019</a>).</p>
+        <div class="principle-implication">
+          <strong>Design Implication:</strong> Any solution must either extend time available for care encounters or perform root-cause assessment asynchronously outside real-time encounters.
+        </div>
+      </div>
+
+      <!-- P2 -->
+      <div class="card">
+        <div class="card-label purple">P2</div>
+        <h3>Insurance reimbursement structures determine which care models are economically viable at scale</h3>
+        <p>$30.2 billion annual out-of-pocket spending on complementary health exists because insurance excludes these services (<a href="https://www.nccih.nih.gov/health/paying-for-complementary-and-integrative-health-approaches" target="_blank" class="source-link">NCCIH, 2024</a>). Only 23% of insurance plans cover advanced functional testing even when medically justified. DPC market growing at over 1000% in 6 years, with 1,400+ US practices operating outside insurance constraints.</p>
+        <div class="principle-implication">
+          <strong>Design Implication:</strong> Viable functional medicine delivery must operate outside fee-for-service insurance or restructure the payment model entirely.
+        </div>
+      </div>
+
+      <!-- P3 -->
+      <div class="card">
+        <div class="card-label purple">P3</div>
+        <h3>Patients cannot coordinate care across fragmented systems without bearing substantial administrative burden themselves</h3>
+        <p>25% of insured adults delay or forgo care due to administrative tasks (<a href="https://academic.oup.com/healthaffairsscholar/article/3/11/qxaf216/8320353" target="_blank" class="source-link">Patient Admin Burden research, 2025</a>). Workers spend the equivalent of $21.6 billion in time annually on healthcare administration (<a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC8522557/" target="_blank" class="source-link">PMC, 2021</a>). Functional medicine operates as a parallel system with no shared records, referral pathways, or billing integration.</p>
+        <div class="principle-implication">
+          <strong>Design Implication:</strong> Any solution must reduce or eliminate care coordination burden on patients through integration across conventional and functional medicine providers.
+        </div>
+      </div>
+
+      <!-- P4 -->
+      <div class="card">
+        <div class="card-label purple">P4</div>
+        <h3>Conventional medical screening detects disease at established diagnostic thresholds, not at the point of earliest possible intervention</h3>
+        <p>15% of US adults had undiagnosed hypertension, hypercholesterolemia, or diabetes. Subclinical thyroid dysfunction affects up to 8% of the general population (<a href="https://infusionhealth.org/thyroid-dysfunction/subclinical-thyroid-dysfunction-causes-symptoms-importance/" target="_blank" class="source-link">Infusion Health, 2025</a>). Peri-coronary fat inflammation can detect early coronary disease risk in young adults before calcification appears on standard screening (<a href="https://udshealth.com/blog/coronary-inflammation-marker-heart-risk-young-adults/" target="_blank" class="source-link">UDS Health, 2025</a>).</p>
+        <div class="principle-implication">
+          <strong>Design Implication:</strong> Any solution must incorporate broader assessment markers than standard screening &mdash; functional labs, systems-based evaluation, subclinical indicators.
+        </div>
+      </div>
+
+      <!-- P5 (full width) -->
+      <div class="card" style="grid-column: 1 / -1;">
+        <div class="card-label purple">P5</div>
+        <h3>Health outcomes improve when financial incentives align with keeping people healthy rather than treating disease episodes</h3>
+        <p>DPC shows $313 less per-member per-month, 54% reduction in ER claims, 25% fewer hospital admissions, 99% satisfaction. Kaiser Permanente's integrated model attributes its outcomes to incentive alignment (<a href="https://about.kaiserpermanente.org/expertise-and-impact/public-policy/integrated-care" target="_blank" class="source-link">Kaiser Permanente, 2025</a>). Functional medicine patients show 31% clinically meaningful improvement vs. 22% in fee-for-service primary care (<a href="https://jamanetwork.com/journals/jamanetworkopen/fullarticle/2753520" target="_blank" class="source-link">Cleveland Clinic, 2019</a>). Increasing medication adherence in conventional care associates with higher total costs without disease resolution (<a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC10119243/" target="_blank" class="source-link">PMC, 2023</a>).</p>
+        <div class="principle-implication">
+          <strong>Design Implication:</strong> Payment models must reward prevention and root-cause resolution, not service volume.
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- 05 — JOBS TO BE DONE -->
+<section id="jobs">
+  <div class="container">
+    <div class="section-num">05 &mdash; Jobs to Be Done</div>
+    <h2>What People Are Trying to Accomplish</h2>
+    <p class="section-lead">10 jobs derived from customer voice evidence. Functional jobs define what users need, emotional jobs define how they want to feel, social jobs define how they want to be perceived.</p>
+
+    <!-- Functional Jobs (J1-J5) -->
+    <h3 style="margin-bottom: 1.5rem; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--text-muted);">Functional Jobs</h3>
+    <div class="card-grid cols-2" style="margin-bottom: 3rem;">
+
+      <div class="card">
+        <div class="card-label green">J1</div>
+        <h3>Understand what is actually causing persistent symptoms</h3>
+        <p>When I have persistent health symptoms that doctors can't explain, I want to understand what is actually causing them, so I can pursue treatment that resolves the underlying problem rather than masking it.</p>
+        <div class="done-state">
+          <span class="done-state-label">Done When</span>
+          Root cause identified with supporting evidence, treatment plan addresses that cause directly, symptoms begin resolving rather than recurring.
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-label green">J2</div>
+        <h3>Find and afford root-cause care</h3>
+        <p>When I realize conventional care is not resolving my chronic condition, I want to find and afford a practitioner who investigates root causes, so I can get effective treatment without financial hardship.</p>
+        <div class="done-state">
+          <span class="done-state-label">Done When</span>
+          Receiving ongoing root-cause care from a qualified practitioner at a cost that does not create financial hardship or require sacrificing other essentials.
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-label green">J3</div>
+        <h3>Coordinate care across both systems</h3>
+        <p>When receiving care from both conventional and functional providers, I want my care coordinated across both systems, so I can focus on getting better instead of managing records, referrals, and conflicting advice.</p>
+        <div class="done-state">
+          <span class="done-state-label">Done When</span>
+          Providers share relevant records and coordinate treatment plans without requiring the patient to serve as intermediary; no conflicting recommendations go unresolved.
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-label green">J4</div>
+        <h3>Catch health issues before they become serious</h3>
+        <p>When I feel healthy but want to know if something is developing, I want comprehensive assessment beyond standard screening, so I can catch and address health issues before they become serious conditions.</p>
+        <div class="done-state">
+          <span class="done-state-label">Done When</span>
+          Complete health profile received covering systems beyond standard screening; subclinical issues identified with action plan for each; clear baseline established for future comparison.
+        </div>
+      </div>
+
+      <div class="card" style="grid-column: 1 / -1;">
+        <div class="card-label green">J5</div>
+        <h3>Offer employees root-cause health benefits</h3>
+        <p>When I want employees to be genuinely healthy, I want to offer root-cause health benefits alongside existing plans, so I can reduce chronic illness burden and improve workforce wellbeing.</p>
+        <div class="done-state">
+          <span class="done-state-label">Done When</span>
+          Employees have access to root-cause care through their benefits package; utilization and health outcomes are measurable; chronic condition management costs trend downward over time.
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Emotional Jobs (E1-E3) -->
+    <h3 style="margin-bottom: 1.5rem; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--text-muted);">Emotional Jobs</h3>
+    <div class="card-grid cols-3" style="margin-bottom: 3rem;">
+
+      <div class="card">
+        <div class="card-label cyan">E1</div>
+        <h3>Feel Understood</h3>
+        <p>Feel understood and believed about my health concerns rather than dismissed or doubted.</p>
+      </div>
+
+      <div class="card">
+        <div class="card-label cyan">E2</div>
+        <h3>Feel In Control</h3>
+        <p>Feel in control of my health journey rather than trapped in a system that makes decisions for me.</p>
+      </div>
+
+      <div class="card">
+        <div class="card-label cyan">E3</div>
+        <h3>Feel Hopeful</h3>
+        <p>Feel hopeful that my health can genuinely improve rather than resigned to managing symptoms indefinitely.</p>
+      </div>
+
+    </div>
+
+    <!-- Social Jobs (S1-S2) -->
+    <h3 style="margin-bottom: 1.5rem; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--text-muted);">Social Jobs</h3>
+    <div class="card-grid cols-2">
+
+      <div class="card">
+        <div class="card-label amber">S1</div>
+        <h3>Responsible Health Advocate</h3>
+        <p>Be seen as a responsible person advocating for my health rather than a difficult patient who won't accept the diagnosis.</p>
+      </div>
+
+      <div class="card">
+        <div class="card-label amber">S2</div>
+        <h3>Genuine Employer Investment</h3>
+        <p>Be seen as an employer who genuinely invests in employee health rather than one offering token wellness perks.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- 06 — CUSTOMER VOICES -->
+<section class="section-alt" id="voices">
+  <div class="container">
+    <div class="section-num">06 &mdash; Customer Voices</div>
+    <h2>What People Are Saying</h2>
+    <p class="section-lead">Verbatim quotes from patients, practitioners, and researchers across seven themes.</p>
+
+    <div class="card-grid cols-2">
+
+      <div class="quote-card">
+        <blockquote>Many patients break down in tears during their first consultation &mdash; not because they're sad, but because they finally feel understood after years of having their concerns dismissed.</blockquote>
+        <div class="quote-attribution">&mdash; Practitioner accounts, 2025</div>
+      </div>
+
+      <div class="quote-card">
+        <blockquote>Her insurance provider has four times denied coverage of an antidepressant medication prescribed by her doctor. Her doctor's office gave her a genetic test that indicated potential adverse reactions from all medications except the one her insurer won't cover.</blockquote>
+        <div class="quote-attribution">&mdash; <a href="https://www.columbian.com/news/2025/feb/22/who-is-in-charge-of-health-care-vancouver-womans-doctor-prescribed-a-medication-but-her-insurance-denied-her-four-times/" target="_blank" class="source-link">Patient account, 2025</a></div>
+      </div>
+
+      <div class="quote-card">
+        <blockquote>We can only go over one of your problems today, which one is it going to be?</blockquote>
+        <div class="quote-attribution">&mdash; Physician account describing systemic pressure, 2025</div>
+      </div>
+
+      <div class="quote-card">
+        <blockquote>The conventional approach can feel fragmented: one specialist for digestion, another for hormones, another for mental health. Rarely are these systems viewed as interconnected, even though science clearly shows they are.</blockquote>
+        <div class="quote-attribution">&mdash; Multiple practitioner sources, 2025</div>
+      </div>
+
+      <div class="quote-card">
+        <blockquote>Through careful investigation, Dr. Karmazin discovered that Sarah had undiagnosed celiac disease complicated by mold exposure in her home. Six months after beginning treatment, Sarah returned to teaching part-time.</blockquote>
+        <div class="quote-attribution">&mdash; Practitioner case study, 2025</div>
+      </div>
+
+      <div class="quote-card">
+        <blockquote>The fact that health plans eventually relent and admit that the treatment is appropriate is evidence that the health plan didn't need to put up these barriers in the first place. But in the meantime, patients are not getting treated.</blockquote>
+        <div class="quote-attribution">&mdash; Physician account, 2025</div>
+      </div>
+
+      <div class="quote-card">
+        <blockquote>Those spending more time on the phone with insurers reported higher stress and burnout and were more likely to miss work.</blockquote>
+        <div class="quote-attribution">&mdash; <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC8522557/" target="_blank" class="source-link">PMC, 2021</a></div>
+      </div>
+
+      <div class="quote-card">
+        <blockquote>Surface-level wellness perks fail without culture change &mdash; employees need real support, not token benefits.</blockquote>
+        <div class="quote-attribution">&mdash; Workplace wellness research, 2025</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- 07 — GATE REVIEW -->
+<section id="gate">
+  <div class="container">
+    <div class="section-num">07 &mdash; Gate Review</div>
+    <h2>Gate 1: Is This Problem Real and Severe?</h2>
+    <p class="section-lead">Evidence briefing for human decision. Work is autonomous between gates; human-decided at gates.</p>
+
+    <!-- Evidence Briefing -->
+    <div class="evidence-briefing">
+      <h3>Evidence Briefing</h3>
+      <div class="briefing-stats">
+        <div class="briefing-stat">
+          <span class="briefing-stat-value">6</span>
+          <div class="briefing-stat-label">Hypotheses tested</div>
+        </div>
+        <div class="briefing-stat">
+          <span class="briefing-stat-value">4</span>
+          <div class="briefing-stat-label">Validated</div>
+        </div>
+        <div class="briefing-stat">
+          <span class="briefing-stat-value">2</span>
+          <div class="briefing-stat-label">Redirected</div>
+        </div>
+        <div class="briefing-stat">
+          <span class="briefing-stat-value">226</span>
+          <div class="briefing-stat-label">Citations</div>
+        </div>
+        <div class="briefing-stat">
+          <span class="briefing-stat-value">5</span>
+          <div class="briefing-stat-label">First principles</div>
+        </div>
+        <div class="briefing-stat">
+          <span class="briefing-stat-value">22/22</span>
+          <div class="briefing-stat-label">Validation checks</div>
+        </div>
+      </div>
+
+      <div class="briefing-columns">
+        <div>
+          <h4 class="briefing-strong">Strengths</h4>
+          <ul class="briefing-list strong">
+            <li>Chronic condition prevalence well-documented (76.4%, <a href="https://www.cdc.gov/pcd/issues/2025/24_0539.htm" target="_blank" class="source-link">CDC, 2025</a>)</li>
+            <li>Administrative burden quantified ($143.6B combined economic cost)</li>
+            <li>Functional medicine outcomes validated (<a href="https://jamanetwork.com/journals/jamanetworkopen/fullarticle/2753520" target="_blank" class="source-link">Cleveland Clinic study</a>)</li>
+            <li>Customer voice evidence spans patients, practitioners, employers</li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="briefing-weak">Weaknesses</h4>
+          <ul class="briefing-list weak">
+            <li>Functional medicine wait time data is anecdotal</li>
+            <li>Condition-specific outcome data is limited</li>
+            <li>Geographic practitioner distribution data unavailable</li>
+            <li>No direct head-to-head patient satisfaction comparison</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Validation Card -->
+    <div class="validation-card">
+      <div class="validation-status">
+        <div class="validation-icon">&#10003;</div>
+        <div class="validation-text">
+          <h3>Validation Complete</h3>
+          <p>All 22 automated checks passed</p>
+        </div>
+      </div>
+      <div class="validation-stats">
+        <div class="validation-stat">
+          <div class="validation-stat-value" style="color: var(--green);">22</div>
+          <div class="validation-stat-label">Passed</div>
+        </div>
+        <div class="validation-stat">
+          <div class="validation-stat-value" style="color: var(--amber);">0</div>
+          <div class="validation-stat-label">Warnings</div>
+        </div>
+        <div class="validation-stat">
+          <div class="validation-stat-value" style="color: var(--red);">0</div>
+          <div class="validation-stat-label">Failed</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Gate Decision -->
+    <div class="gate-group-label">Blocking Decision</div>
+    <div class="gate-group-desc">This decision must be made before proceeding.</div>
+
+    <div class="gate-cards">
+      <div class="gate-card">
+        <div class="gate-card-header">
+          <div class="gate-num">1</div>
+          <span class="gate-question">Proceed to Market workspace?</span>
+          <span class="gate-priority blocking">Blocking</span>
+        </div>
+        <div class="gate-context">Problem documented as real and severe. Evidence supports 5 first principles and 10 JTBD. 22/22 validation checks passed.</div>
+        <div class="gate-options">
+          <div class="gate-option"><strong>Proceed</strong> &mdash; <span class="gate-consequence">Market workspace begins: sizing job executor population, competitive landscape, willingness to pay.</span></div>
+          <div class="gate-option"><strong>Revise</strong> &mdash; <span class="gate-consequence">Rework problem thesis with specific feedback.</span></div>
+          <div class="gate-option"><strong>Kill</strong> &mdash; <span class="gate-consequence">Archive venture with documented learnings.</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 08 — SOURCES -->
+<section class="section-alt" id="sources">
+  <div class="container">
+    <div class="section-num">08 &mdash; Sources</div>
+    <h2>Source Library</h2>
+    <p class="section-lead">All sources cited in the problem thesis, organized by category.</p>
+
+    <div class="sources-grid">
+
+      <!-- Government Data -->
+      <div class="source-category">
+        <h3>Government Data</h3>
+        <ul class="source-list">
+          <li><span class="source-org">CDC</span> &mdash; Trends in Multiple Chronic Conditions Among US Adults <span class="source-date">(2025)</span><br><a href="https://www.cdc.gov/pcd/issues/2025/24_0539.htm" target="_blank">cdc.gov/pcd/issues/2025/24_0539.htm</a></li>
+          <li><span class="source-org">CDC/NCHS</span> &mdash; One in Seven Adults Don't Know They Have Certain Major Chronic Conditions <span class="source-date">(2010)</span><br><a href="https://blogs.cdc.gov/nchs/2010/05/07/1051/" target="_blank">blogs.cdc.gov/nchs/2010/05/07/1051/</a></li>
+          <li><span class="source-org">NIH/NCCIH</span> &mdash; Paying for Complementary and Integrative Health Approaches <span class="source-date">(2024)</span><br><a href="https://www.nccih.nih.gov/health/paying-for-complementary-and-integrative-health-approaches" target="_blank">nccih.nih.gov</a></li>
+          <li><span class="source-org">NIH</span> &mdash; NIH Analysis Reveals Significant Rise in Use of Complementary Health Approaches <span class="source-date">(2024)</span><br><a href="https://www.nih.gov/news-events/news-releases/nih-analysis-reveals-significant-rise-use-complementary-health-approaches-especially-pain-management" target="_blank">nih.gov/news-events</a></li>
+          <li><span class="source-org">NIMH</span> &mdash; Understanding the Link Between Chronic Disease and Depression<br><a href="https://www.nimh.nih.gov/health/publications/chronic-illness-mental-health" target="_blank">nimh.nih.gov</a></li>
+        </ul>
+      </div>
+
+      <!-- Academic Research -->
+      <div class="source-category">
+        <h3>Academic Research</h3>
+        <ul class="source-list">
+          <li><span class="source-org">JAMA Network Open / Cleveland Clinic</span> &mdash; Functional Medicine Model of Care and Patient-Reported Quality of Life <span class="source-date">(2019)</span><br><a href="https://jamanetwork.com/journals/jamanetworkopen/fullarticle/2753520" target="_blank">jamanetwork.com</a></li>
+          <li><span class="source-org">PMC / Cleveland Clinic</span> &mdash; Association of the Functional Medicine Model of Care With Patient-Reported Health Outcomes <span class="source-date">(2019)</span><br><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC6822085/" target="_blank">pmc.ncbi.nlm.nih.gov</a></li>
+          <li><span class="source-org">PMC</span> &mdash; Comorbidity Status and Annual Total Medical Expenditures <span class="source-date">(2018)</span><br><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC5836318/" target="_blank">pmc.ncbi.nlm.nih.gov</a></li>
+          <li><span class="source-org">PMC</span> &mdash; Health Care Administrative Burdens: Centering Patient Experiences <span class="source-date">(2021)</span><br><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC8522557/" target="_blank">pmc.ncbi.nlm.nih.gov</a></li>
+          <li><span class="source-org">Oxford Academic / Health Affairs Scholar</span> &mdash; Patient Administrative Burden: A Scoping Review <span class="source-date">(2025)</span><br><a href="https://academic.oup.com/healthaffairsscholar/article/3/11/qxaf216/8320353" target="_blank">academic.oup.com</a></li>
+          <li><span class="source-org">PMC</span> &mdash; Medication Adherence and Healthcare Costs in Chronically Ill Patients <span class="source-date">(2023)</span><br><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC10119243/" target="_blank">pmc.ncbi.nlm.nih.gov</a></li>
+          <li><span class="source-org">PMC</span> &mdash; Patient Outcomes and Costs Associated with Functional Medicine Shared Medical Appointments <span class="source-date">(2021)</span><br><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC8051390/" target="_blank">pmc.ncbi.nlm.nih.gov</a></li>
+          <li><span class="source-org">PMC / Parsley Health</span> &mdash; Feasibility and Acceptability of a Large-Scale Holistic Telehealth Program <span class="source-date">(2023)</span><br><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC10057965/" target="_blank">pmc.ncbi.nlm.nih.gov</a></li>
+          <li><span class="source-org">PMC</span> &mdash; Direct Primary Care: A Successful Financial Model <span class="source-date">(2021)</span><br><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC8504342/" target="_blank">pmc.ncbi.nlm.nih.gov</a></li>
+          <li><span class="source-org">PMC</span> &mdash; Functional Medicine Past, Present, and Future <span class="source-date">(2022)</span><br><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC9173848/" target="_blank">pmc.ncbi.nlm.nih.gov</a></li>
+          <li><span class="source-org">PMC</span> &mdash; Integrative Medicine as a Vital Component of Patient Care <span class="source-date">(2018)</span><br><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC6173273/" target="_blank">pmc.ncbi.nlm.nih.gov</a></li>
+          <li><span class="source-org">PMC</span> &mdash; Care Fragmentation, Care Continuity, and Care Coordination <span class="source-date">(2024)</span><br><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC10923120/" target="_blank">pmc.ncbi.nlm.nih.gov</a></li>
+          <li><span class="source-org">PMC</span> &mdash; Insurance Barriers and Inequalities in Health Care Access <span class="source-date">(2024)</span><br><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC10956272/" target="_blank">pmc.ncbi.nlm.nih.gov</a></li>
+          <li><span class="source-org">PMC</span> &mdash; Cost-Related Access Barriers, Medical Debt, and Dissatisfaction with Care <span class="source-date">(2023)</span><br><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC10039217/" target="_blank">pmc.ncbi.nlm.nih.gov</a></li>
+          <li><span class="source-org">PLOS ONE</span> &mdash; The Impact of Functional Medicine on Patient-Reported Outcomes <span class="source-date">(2020)</span><br><a href="https://journals.plos.org/plosone/article?id=10.1371%2Fjournal.pone.0240416" target="_blank">journals.plos.org</a></li>
+          <li><span class="source-org">PMC</span> &mdash; Complementary and Alternative Medicine: If You Don't Ask, They Won't Tell <span class="source-date">(2019)</span><br><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC6519570/" target="_blank">pmc.ncbi.nlm.nih.gov</a></li>
+        </ul>
+      </div>
+
+      <!-- Industry Reports -->
+      <div class="source-category">
+        <h3>Industry Reports and Analysis</h3>
+        <ul class="source-list">
+          <li><span class="source-org">McKinsey Health Institute</span> &mdash; Reframing Employee Health: Moving Beyond Burnout to Holistic Health <span class="source-date">(2023)</span><br><a href="https://www.mckinsey.com/mhi/our-insights/reframing-employee-health-moving-beyond-burnout-to-holistic-health" target="_blank">mckinsey.com</a></li>
+          <li><span class="source-org">KFF</span> &mdash; 2025 Employer Health Benefits Survey<br><a href="https://www.kff.org/health-costs/2025-employer-health-benefits-survey/" target="_blank">kff.org</a></li>
+          <li><span class="source-org">PAN Foundation</span> &mdash; National Poll Reveals Half of Patients Denied Coverage for Medications <span class="source-date">(2025)</span><br><a href="https://www.panfoundation.org/more-than-half-of-patients-report-health-insurance-denied-coverage-for-medications/" target="_blank">panfoundation.org</a></li>
+          <li><span class="source-org">Gallup</span> &mdash; Poor Wellbeing Linked to Formation of New Chronic Conditions<br><a href="https://news.gallup.com/poll/512750/poor-wellbeing-linked-formation-new-chronic-conditions.aspx" target="_blank">news.gallup.com</a></li>
+          <li><span class="source-org">Health System Tracker / Peterson-KFF</span> &mdash; How Has the Burden of Chronic Diseases in the U.S. Changed Over Time<br><a href="https://www.healthsystemtracker.org/chart-collection/how-has-the-burden-of-chronic-diseases-in-the-u-s-and-peer-nations-changed-over-time/" target="_blank">healthsystemtracker.org</a></li>
+          <li><span class="source-org">McKinsey</span> &mdash; The Future of Wellness Trends Survey <span class="source-date">(2025)</span><br><a href="https://www.mckinsey.com/industries/consumer-packaged-goods/our-insights/future-of-wellness-trends" target="_blank">mckinsey.com</a></li>
+          <li><span class="source-org">NACHC</span> &mdash; Closing the Primary Care Gap <span class="source-date">(2023)</span><br><a href="https://www.nachc.org/wp-content/uploads/2023/06/Closing-the-Primary-Care-Gap_Full-Report_2023_digital-final.pdf" target="_blank">nachc.org</a></li>
+        </ul>
+      </div>
+
+      <!-- Clinical Practice Sources -->
+      <div class="source-category">
+        <h3>Clinical Practice Sources</h3>
+        <ul class="source-list">
+          <li><span class="source-org">Institute for Functional Medicine (IFM)</span> &mdash; Find a Practitioner<br><a href="https://www.ifm.org/find-a-practitioner" target="_blank">ifm.org/find-a-practitioner</a></li>
+          <li><span class="source-org">IFM</span> &mdash; Functional Medicine Associated with Lower Pharmacy Claim Costs<br><a href="https://www.ifm.org/news/ashland-school-district-pharmacy-costs" target="_blank">ifm.org</a></li>
+          <li><span class="source-org">IFM</span> &mdash; Functional Medicine in Practice<br><a href="https://www.ifm.org/functional-medicine/in-practice" target="_blank">ifm.org</a></li>
+          <li><span class="source-org">Cleveland Clinic</span> &mdash; Center for Functional Medicine<br><a href="https://my.clevelandclinic.org/departments/functional-medicine" target="_blank">my.clevelandclinic.org</a></li>
+          <li><span class="source-org">Kaiser Permanente</span> &mdash; Our Integrated Care Model<br><a href="https://about.kaiserpermanente.org/expertise-and-impact/public-policy/integrated-care" target="_blank">about.kaiserpermanente.org</a></li>
+          <li><span class="source-org">AAFP</span> &mdash; Direct Primary Care<br><a href="https://www.aafp.org/family-physician/practice-and-career/delivery-payment-models/direct-primary-care.html" target="_blank">aafp.org</a></li>
+          <li><span class="source-org">Fullscript</span> &mdash; The Average Price of a Functional Medicine Visit<br><a href="https://fullscript.com/blog/the-average-price-of-a-functional-medicine-visit" target="_blank">fullscript.com</a></li>
+          <li><span class="source-org">CCF Med</span> &mdash; What Does Functional Medicine Really Cost?<br><a href="https://www.ccfmed.com/blog/what-does-functional-medicine-really-cost" target="_blank">ccfmed.com</a></li>
+          <li><span class="source-org">Kresser Institute</span> &mdash; Why Allied Practitioners Are the Future of Functional Medicine<br><a href="https://kresserinstitute.com/why-allied-practitioners-are-the-future-of-functional-medicine/" target="_blank">kresserinstitute.com</a></li>
+          <li><span class="source-org">Infusion Health</span> &mdash; Subclinical Thyroid Dysfunction: Causes, Symptoms and Importance<br><a href="https://infusionhealth.org/thyroid-dysfunction/subclinical-thyroid-dysfunction-causes-symptoms-importance/" target="_blank">infusionhealth.org</a></li>
+          <li><span class="source-org">UDS Health</span> &mdash; Coronary Inflammation Marker Detects Hidden Heart Disease Risk in Young Adults<br><a href="https://udshealth.com/blog/coronary-inflammation-marker-heart-risk-young-adults/" target="_blank">udshealth.com</a></li>
+          <li><span class="source-org">Parsley Health</span> &mdash; Enterprise Partners<br><a href="https://www.parsleyhealth.com/enterprise-partners" target="_blank">parsleyhealth.com</a></li>
+          <li><span class="source-org">Function Health</span> &mdash; For Business<br><a href="https://www.functionhealth.com/for-business" target="_blank">functionhealth.com</a></li>
+          <li><span class="source-org">DrFirst</span> &mdash; Stuck in the System: How Prior Authorization Delays Frustrate and Harm Patients<br><a href="https://drfirst.com/press-releases/stuck-in-the-system-how-prior-authorization-delays-frustrate-and-harm-patients" target="_blank">drfirst.com</a></li>
+          <li><span class="source-org">AMA</span> &mdash; What Doctors Wish Patients Knew About Prior Authorization<br><a href="https://www.ama-assn.org/practice-management/prior-authorization/what-doctors-wish-patients-knew-about-prior-authorization" target="_blank">ama-assn.org</a></li>
+        </ul>
+      </div>
+
+      <!-- Customer Voice Sources -->
+      <div class="source-category">
+        <h3>Customer Voice Sources</h3>
+        <ul class="source-list">
+          <li><span class="source-org">The Columbian</span> &mdash; Who Is in Charge of Health Care? Vancouver Woman's Insurance Denied Her Four Times <span class="source-date">(2025)</span><br><a href="https://www.columbian.com/news/2025/feb/22/who-is-in-charge-of-health-care-vancouver-womans-doctor-prescribed-a-medication-but-her-insurance-denied-her-four-times/" target="_blank">columbian.com</a></li>
+          <li><span class="source-org">PatientsLikeMe</span> &mdash; The Emotional Struggle of Chronic Conditions<br><a href="https://www.patientslikeme.com/blog/the-emotional-struggle-of-chronic-conditions" target="_blank">patientslikeme.com</a></li>
+          <li><span class="source-org">PatientsLikeMe</span> &mdash; Steps to Reduce Feelings of Guilt and Shame Around Chronic Illness<br><a href="https://www.patientslikeme.com/blog/steps-to-reduce-feelings-of-guilt-and-shame-around-chronic-illness" target="_blank">patientslikeme.com</a></li>
+          <li><span class="source-org">Counseling Today / ACA</span> &mdash; Coping with the Stress and Uncertainty of Chronic Health Conditions<br><a href="https://www.counseling.org/publications/counseling-today-magazine/article-archive/article/legacy/coping-with-the-stress-and-uncertainty-of-chronic-health-conditions" target="_blank">counseling.org</a></li>
+          <li><span class="source-org">Psychology Today</span> &mdash; Medical Gaslighting: A Problem With a Solution <span class="source-date">(2024)</span><br><a href="https://www.psychologytoday.com/us/blog/the-best-possible-outcome/202410/medical-gaslighting-a-problem-with-a-solution" target="_blank">psychologytoday.com</a></li>
+          <li><span class="source-org">Practical Neurology</span> &mdash; The Myth of Medical Gaslighting<br><a href="https://practicalneurology.com/columns/practice-management/the-myth-of-medical-gaslighting-when-patient-perception-and-physician-intention-collide/36117/" target="_blank">practicalneurology.com</a></li>
+          <li><span class="source-org">PhRMA</span> &mdash; The Patient Experience: Insurance Barriers Continue to Impede Access to Health Care<br><a href="https://phrma.org/blog/the-patient-experience-insurance-barriers-continue-to-impede-access-to-health-care-especially-among-the-countrys-underserved" target="_blank">phrma.org</a></li>
+          <li><span class="source-org">HR.com</span> &mdash; Employee Well-Being in Focus: Evidence, Challenges, and Future Directions<br><a href="https://www.hr.com/en/magazines/all_articles/employee-well-being-in-focus-evidence-challenges-a_mewmfgxv.html" target="_blank">hr.com</a></li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p>Tikvah Health and Wellness &mdash; Problem Thesis v1.0 &mdash; February 2026 &mdash; Venture Forge</p>
+</footer>
+
+<!-- EVIDENCE MODAL -->
+<div class="evidence-modal-backdrop" id="evidenceModalBackdrop">
+  <div class="evidence-modal">
+    <button class="evidence-modal-close" onclick="closeEvidenceModal()">&times;</button>
+    <div class="evidence-modal-body" id="evidenceModalBody"></div>
+  </div>
+</div>
+
+<!-- JAVASCRIPT -->
+<script>
+/* Smooth scroll for nav links */
+document.querySelectorAll('a[href^="#"]').forEach(function(a) {
+  a.addEventListener('click', function(e) {
+    var id = this.getAttribute('href');
+    if (id === '#') return;
+    var el = document.querySelector(id);
+    if (el) {
+      e.preventDefault();
+      el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  });
+});
+
+/* Accordion toggle */
+function toggleAccordion(header) {
+  var item = header.parentElement;
+  var wasOpen = item.classList.contains('open');
+  item.classList.toggle('open');
+}
+
+/* Evidence modal */
+var evidenceData = {
+  'chronic-prevalence': {
+    claim: '76.4% of US adults (approximately 194 million) reported one or more chronic conditions in 2023',
+    evidence: [
+      { finding: 'CDC analysis of National Health Interview Survey (NHIS) data shows 76.4% chronic condition prevalence among US adults.', source: 'CDC', date: '2025', url: 'https://www.cdc.gov/pcd/issues/2025/24_0539.htm' },
+      { finding: '51.4% of US adults (130 million) reported multiple chronic conditions simultaneously.', source: 'CDC', date: '2025', url: 'https://www.cdc.gov/pcd/issues/2025/24_0539.htm' },
+      { finding: 'Chronic condition prevalence among young adults increased by 7.0 percentage points between 2013 and 2023.', source: 'CDC', date: '2025', url: 'https://www.cdc.gov/pcd/issues/2025/24_0539.htm' }
+    ],
+    conclusion: 'Chronic condition prevalence is widespread, worsening, and well-documented by CDC primary data.'
+  },
+  'admin-burden': {
+    claim: '25% of insured adults delay or forgo care due to administrative tasks',
+    evidence: [
+      { finding: '25% of insured adults delay or forgo care due to administrative tasks -- impact comparable to financial barriers.', source: 'Patient Admin Burden research', date: '2025', url: 'https://academic.oup.com/healthaffairsscholar/article/3/11/qxaf216/8320353' },
+      { finding: 'US workers spend equivalent of $21.6 billion in time annually dealing with healthcare administration.', source: 'PMC', date: '2021', url: 'https://pmc.ncbi.nlm.nih.gov/articles/PMC8522557/' },
+      { finding: '57% of patients devoted time to seeking information from insurers or providers; one-third reporting a billing problem delayed or missed care.', source: 'PMC', date: '2021', url: 'https://pmc.ncbi.nlm.nih.gov/articles/PMC8522557/' }
+    ],
+    conclusion: 'Administrative burden is a clinically significant barrier to care, comparable in impact to financial barriers.'
+  },
+  'cost-escalation': {
+    claim: 'Patients with 3+ comorbidities incur 3.6x the cost of those with one condition',
+    evidence: [
+      { finding: 'Patients with hypertension and 3+ comorbidities incur $13,920 annually vs $3,914 for hypertension alone -- 3.6x escalation.', source: 'PMC', date: '2018', url: 'https://pmc.ncbi.nlm.nih.gov/articles/PMC5836318/' },
+      { finding: 'Increasing medication adherence associates with higher total costs without disease resolution -- sustained symptomatic control requiring indefinite medication.', source: 'PMC', date: '2023', url: 'https://pmc.ncbi.nlm.nih.gov/articles/PMC10119243/' }
+    ],
+    conclusion: 'Conventional care cost-escalates with comorbidities without resolution, creating a structural cost trap.'
+  },
+  'insurance-gatekeeping': {
+    claim: '54% of insured adults told chronic disease medications no longer covered',
+    evidence: [
+      { finding: '54% of insured adults with commercial insurance have been told that medications for their chronic or rare disease are no longer covered.', source: 'PAN Foundation', date: '2025', url: 'https://www.panfoundation.org/more-than-half-of-patients-report-health-insurance-denied-coverage-for-medications/' },
+      { finding: '36% report their health condition worsened while waiting for prior authorization approval.', source: 'DrFirst', date: '2025', url: 'https://drfirst.com/press-releases/stuck-in-the-system-how-prior-authorization-delays-frustrate-and-harm-patients' },
+      { finding: 'Among patients whose prior authorization was denied, one in four never obtained the prescribed medication.', source: 'DrFirst', date: '2025', url: 'https://drfirst.com/press-releases/stuck-in-the-system-how-prior-authorization-delays-frustrate-and-harm-patients' }
+    ],
+    conclusion: 'Insurance gatekeeping actively harms patients by denying and delaying prescribed treatments.'
+  },
+  'functional-medicine-outcomes': {
+    claim: 'Cleveland Clinic: 31% functional medicine vs 22% primary care meaningful improvement',
+    evidence: [
+      { finding: 'Two-year study: 31% of functional medicine patients achieved clinically meaningful improvement in PROMIS global physical health scores vs 22% in primary care.', source: 'Cleveland Clinic / JAMA Network Open', date: '2019', url: 'https://jamanetwork.com/journals/jamanetworkopen/fullarticle/2753520' },
+      { finding: 'Improvement attributed to "differences in the functional medicine model itself" -- extended time, root-cause approach.', source: 'Cleveland Clinic', date: '2019', url: 'https://jamanetwork.com/journals/jamanetworkopen/fullarticle/2753520' }
+    ],
+    conclusion: 'Functional medicine produces measurably better outcomes than conventional primary care in a rigorous academic setting.'
+  },
+  'functional-medicine-cost': {
+    claim: 'Functional medicine costs $350-$950 initially, $5,000-$15,000/yr -- largely out of pocket',
+    evidence: [
+      { finding: 'Initial consultations range from $350 to $950; comprehensive care programs spanning 6-12 months cost between $5,000 and $15,000 per year.', source: 'Fullscript / CCF Med', date: '2025', url: 'https://fullscript.com/blog/the-average-price-of-a-functional-medicine-visit' },
+      { finding: 'Only 23% of insurance plans cover advanced functional testing even when medically justified.', source: 'Insurance analysis', date: '2025', url: null },
+      { finding: 'IFM maintains 3,100+ active practitioner listings -- approximately 1 per 100,000+ Americans vs 1 PCP per 1,700.', source: 'IFM', date: '2025', url: 'https://www.ifm.org/find-a-practitioner' }
+    ],
+    conclusion: 'Functional medicine is effective but financially and geographically inaccessible to most Americans.'
+  }
+};
+
+function showEvidence(key) {
+  var data = evidenceData[key];
+  if (!data) return;
+  var html = '<div class="evidence-modal-claim">' + data.claim + '</div>';
+  html += '<h4>Evidence Chain</h4>';
+  html += '<ol class="evidence-chain">';
+  data.evidence.forEach(function(e) {
+    html += '<li><span class="evidence-finding">' + e.finding + '</span>';
+    html += '<span class="evidence-source">';
+    if (e.url) {
+      html += '<a href="' + e.url + '" target="_blank">' + e.source + '</a>';
+    } else {
+      html += e.source;
+    }
+    html += ' <span class="evidence-date">(' + e.date + ')</span></span></li>';
+  });
+  html += '</ol>';
+  html += '<div class="evidence-modal-conclusion">' + data.conclusion + '</div>';
+  document.getElementById('evidenceModalBody').innerHTML = html;
+  document.getElementById('evidenceModalBackdrop').classList.add('active');
+}
+
+function closeEvidenceModal() {
+  document.getElementById('evidenceModalBackdrop').classList.remove('active');
+}
+
+document.getElementById('evidenceModalBackdrop').addEventListener('click', function(e) {
+  if (e.target === this) closeEvidenceModal();
+});
+
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') closeEvidenceModal();
+});
+</script>
+
+</body>
+</html>
